@@ -1,0 +1,15 @@
+kode,nama,kategori,jumlah,harga,kondisi,lokasi
+KMP-001,Komputer Desktop i5,Komputer,20,7500000,baik,Lab 1
+KMP-002,Laptop Praktikum,Komputer,8,9200000,baik,Lab 2
+MON-001,Monitor LED 24 inch,Periferal,22,1800000,baik,Lab 1
+MON-002,Monitor LED 19 inch,Periferal,5,950000,rusak,Gudang
+KBD-001,Keyboard USB,Periferal,30,150000,baik,Lab 1
+MSE-001,Mouse Optik,Periferal,2,85000,baik,Lab 2
+NET-001,Switch 24 Port,Jaringan,3,2400000,baik,Ruang Server
+NET-002,Router Mikrotik,Jaringan,4,1650000,perbaikan,Lab 3
+NET-003,Kabel UTP Cat6 (roll),Jaringan,0,1100000,baik,Gudang
+PRJ-001,Proyektor,Multimedia,3,5200000,baik,Lab 1
+PRJ-002,Layar Proyektor,Multimedia,3,1300000,baik,Lab 2
+UPS-001,UPS 1200VA,Kelistrikan,6,1450000,baik,Ruang Server
+ARD-001,Arduino Uno,IoT,15,120000,baik,Lab IoT
+SNS-001,Sensor DHT22,IoT,3,45000,baik,Lab IoT

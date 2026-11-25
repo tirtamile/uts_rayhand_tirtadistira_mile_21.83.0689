@@ -1,0 +1,146 @@
+[
+  {
+    "kode": "KMP-001",
+    "nama": "Komputer Desktop i5",
+    "kategori": "Komputer",
+    "jumlah": "20",
+    "harga": "7500000",
+    "kondisi": "baik",
+    "lokasi": "Lab 1"
+  },
+  {
+    "kode": "KMP-002",
+    "nama": "Laptop Praktikum",
+    "kategori": "Komputer",
+    "jumlah": "8",
+    "harga": "9200000",
+    "kondisi": "baik",
+    "lokasi": "Lab 2"
+  },
+  {
+    "kode": "MON-001",
+    "nama": "Monitor LED 24 inch",
+    "kategori": "Periferal",
+    "jumlah": "22",
+    "harga": "1800000",
+    "kondisi": "baik",
+    "lokasi": "Lab 1"
+  },
+  {
+    "kode": "MON-002",
+    "nama": "Monitor LED 19 inch",
+    "kategori": "Periferal",
+    "jumlah": "5",
+    "harga": "950000",
+    "kondisi": "rusak",
+    "lokasi": "Gudang"
+  },
+  {
+    "kode": "KBD-001",
+    "nama": "Keyboard USB",
+    "kategori": "Periferal",
+    "jumlah": "30",
+    "harga": "150000",
+    "kondisi": "baik",
+    "lokasi": "Lab 1"
+  },
+  {
+    "kode": "MSE-001",
+    "nama": "Mouse Optik",
+    "kategori": "Periferal",
+    "jumlah": "2",
+    "harga": "85000",
+    "kondisi": "baik",
+    "lokasi": "Lab 2"
+  },
+  {
+    "kode": "NET-001",
+    "nama": "Switch 24 Port",
+    "kategori": "Jaringan",
+    "jumlah": "3",
+    "harga": "2400000",
+    "kondisi": "baik",
+    "lokasi": "Ruang Server"
+  },
+  {
+    "kode": "NET-002",
+    "nama": "Router Mikrotik",
+    "kategori": "Jaringan",
+    "jumlah": "4",
+    "harga": "1650000",
+    "kondisi": "perbaikan",
+    "lokasi": "Lab 3"
+  },
+  {
+    "kode": "NET-003",
+    "nama": "Kabel UTP Cat6 (roll)",
+    "kategori": "Jaringan",
+    "jumlah": "0",
+    "harga": "1100000",
+    "kondisi": "baik",
+    "lokasi": "Gudang"
+  },
+  {
+    "kode": "PRJ-001",
+    "nama": "Proyektor",
+    "kategori": "Multimedia",
+    "jumlah": "3",
+    "harga": "5200000",
+    "kondisi": "baik",
+    "lokasi": "Lab 1"
+  },
+  {
+    "kode": "PRJ-002",
+    "nama": "Layar Proyektor",
+    "kategori": "Multimedia",
+    "jumlah": "3",
+    "harga": "1300000",
+    "kondisi": "baik",
+    "lokasi": "Lab 2"
+  },
+  {
+    "kode": "UPS-001",
+    "nama": "UPS 1200VA",
+    "kategori": "Kelistrikan",
+    "jumlah": "6",
+    "harga": "1450000",
+    "kondisi": "baik",
+    "lokasi": "Ruang Server"
+  },
+  {
+    "kode": "KMP-001",
+    "nama": "Komputer Desktop i5",
+    "kategori": "Komputer",
+    "jumlah": "20",
+    "harga": "7500000",
+    "kondisi": "baik",
+    "lokasi": "Lab 1"
+  },
+  {
+    "kode": "MSE-001",
+    "nama": "Mouse Optik",
+    "kategori": "Periferal",
+    "jumlah": "2",
+    "harga": "85000",
+    "kondisi": "baik",
+    "lokasi": "Lab 2"
+  },
+  {
+    "kode": "ARD-001",
+    "nama": "Arduino Uno",
+    "kategori": "IoT",
+    "jumlah": "15",
+    "harga": "120000",
+    "kondisi": "baik",
+    "lokasi": "Lab IoT"
+  },
+  {
+    "kode": "SNS-001",
+    "nama": "Sensor DHT22",
+    "kategori": "IoT",
+    "jumlah": "3",
+    "harga": "45000",
+    "kondisi": "baik",
+    "lokasi": "Lab IoT"
+  }
+]

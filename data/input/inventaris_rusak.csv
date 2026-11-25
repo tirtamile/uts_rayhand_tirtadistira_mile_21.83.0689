@@ -1,0 +1,7 @@
+kode,nama,kategori,jumlah,harga,kondisi,lokasi
+KMP-001,Komputer Desktop i5,Komputer,20,7500000,baik,Lab 1
+MON-001,Monitor LED 24 inch,Periferal,abc,1800000,baik,Lab 1
+KBD-001,Keyboard USB,Periferal,30,-150000,baik,Lab 1
+MSE-001,Mouse Optik,Periferal,2,85000,hilang,Lab 2
+,Switch 24 Port,Jaringan,3,2400000,baik,Ruang Server
+UPS-001,UPS 1200VA,Kelistrikan,6,1450000,baik,Ruang Server

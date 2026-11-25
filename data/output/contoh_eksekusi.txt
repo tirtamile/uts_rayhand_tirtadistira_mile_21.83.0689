@@ -1,0 +1,209 @@
+$ python main.py tampil
+[INFO] 16 baris valid dimuat dari data/input/inventaris.csv
+KODE     NAMA                     KATEGORI     JUMLAH HARGA          KONDISI    LOKASI       
+-------- ------------------------ ------------ ------ -------------- ---------- -------------
+KMP-001  Komputer Desktop i5      Komputer     20     Rp 7.500.000   baik       Lab 1        
+KMP-002  Laptop Praktikum         Komputer     8      Rp 9.200.000   baik       Lab 2        
+MON-001  Monitor LED 24 inch      Periferal    22     Rp 1.800.000   baik       Lab 1        
+MON-002  Monitor LED 19 inch      Periferal    5      Rp 950.000     rusak      Gudang       
+KBD-001  Keyboard USB             Periferal    30     Rp 150.000     baik       Lab 1        
+MSE-001  Mouse Optik              Periferal    2      Rp 85.000      baik       Lab 2        
+NET-001  Switch 24 Port           Jaringan     3      Rp 2.400.000   baik       Ruang Server 
+NET-002  Router Mikrotik          Jaringan     4      Rp 1.650.000   perbaikan  Lab 3        
+NET-003  Kabel UTP Cat6 (roll)    Jaringan     0      Rp 1.100.000   baik       Gudang       
+PRJ-001  Proyektor                Multimedia   3      Rp 5.200.000   baik       Lab 1        
+PRJ-002  Layar Proyektor          Multimedia   3      Rp 1.300.000   baik       Lab 2        
+UPS-001  UPS 1200VA               Kelistrikan  6      Rp 1.450.000   baik       Ruang Server 
+KMP-001  Komputer Desktop i5      Komputer     20     Rp 7.500.000   baik       Lab 1        
+MSE-001  Mouse Optik              Periferal    2      Rp 85.000      baik       Lab 2        
+ARD-001  Arduino Uno              IoT          15     Rp 120.000     baik       Lab IoT      
+SNS-001  Sensor DHT22             IoT          3      Rp 45.000      baik       Lab IoT      
+Total: 16 baris
+[exit code: 0]
+
+$ python main.py cari mouse
+[INFO] 16 baris valid dimuat dari data/input/inventaris.csv
+KODE     NAMA                     KATEGORI     JUMLAH HARGA          KONDISI    LOKASI       
+-------- ------------------------ ------------ ------ -------------- ---------- -------------
+MSE-001  Mouse Optik              Periferal    2      Rp 85.000      baik       Lab 2        
+MSE-001  Mouse Optik              Periferal    2      Rp 85.000      baik       Lab 2        
+Total: 2 baris
+Disimpan ke: data/output/hasil_cari.csv
+[exit code: 0]
+
+$ python main.py cari laser
+[INFO] 16 baris valid dimuat dari data/input/inventaris.csv
+Tidak ada barang yang cocok dengan 'laser'.
+[exit code: 0]
+
+$ python main.py filter --kategori Periferal --kondisi baik
+[INFO] 16 baris valid dimuat dari data/input/inventaris.csv
+KODE     NAMA                     KATEGORI     JUMLAH HARGA          KONDISI    LOKASI       
+-------- ------------------------ ------------ ------ -------------- ---------- -------------
+MON-001  Monitor LED 24 inch      Periferal    22     Rp 1.800.000   baik       Lab 1        
+KBD-001  Keyboard USB             Periferal    30     Rp 150.000     baik       Lab 1        
+MSE-001  Mouse Optik              Periferal    2      Rp 85.000      baik       Lab 2        
+MSE-001  Mouse Optik              Periferal    2      Rp 85.000      baik       Lab 2        
+Total: 4 baris
+Disimpan ke: data/output/hasil_filter.csv
+[exit code: 0]
+
+$ python main.py filter --stok-maks 3
+[INFO] 16 baris valid dimuat dari data/input/inventaris.csv
+KODE     NAMA                     KATEGORI     JUMLAH HARGA          KONDISI    LOKASI       
+-------- ------------------------ ------------ ------ -------------- ---------- -------------
+MSE-001  Mouse Optik              Periferal    2      Rp 85.000      baik       Lab 2        
+NET-001  Switch 24 Port           Jaringan     3      Rp 2.400.000   baik       Ruang Server 
+NET-003  Kabel UTP Cat6 (roll)    Jaringan     0      Rp 1.100.000   baik       Gudang       
+PRJ-001  Proyektor                Multimedia   3      Rp 5.200.000   baik       Lab 1        
+PRJ-002  Layar Proyektor          Multimedia   3      Rp 1.300.000   baik       Lab 2        
+MSE-001  Mouse Optik              Periferal    2      Rp 85.000      baik       Lab 2        
+SNS-001  Sensor DHT22             IoT          3      Rp 45.000      baik       Lab IoT      
+Total: 7 baris
+Disimpan ke: data/output/hasil_filter.csv
+[exit code: 0]
+
+$ python main.py rekap
+[INFO] 16 baris valid dimuat dari data/input/inventaris.csv
+[INFO] 2 baris duplikat diabaikan agar rekap tidak terhitung ganda
+KATEGORI       JENIS   UNIT          NILAI ASET
+-----------------------------------------------
+IoT                2     18        Rp 1.935.000
+Jaringan           3      7       Rp 13.800.000
+Kelistrikan        1      6        Rp 8.700.000
+Komputer           2     28      Rp 223.600.000
+Multimedia         2      6       Rp 19.500.000
+Periferal          4     59       Rp 49.020.000
+-----------------------------------------------
+TOTAL             14    124      Rp 316.555.000
+
+Stok habis/menipis (jumlah <= 3):
+  - NET-003 Kabel UTP Cat6 (roll): 0 unit (HABIS)
+  - MSE-001 Mouse Optik: 2 unit (MENIPIS)
+  - NET-001 Switch 24 Port: 3 unit (MENIPIS)
+  - PRJ-001 Proyektor: 3 unit (MENIPIS)
+  - PRJ-002 Layar Proyektor: 3 unit (MENIPIS)
+  - SNS-001 Sensor DHT22: 3 unit (MENIPIS)
+Disimpan ke: data/output/rekap_kategori.json
+[exit code: 0]
+
+$ python main.py bersih
+[INFO] 16 baris valid dimuat dari data/input/inventaris.csv
+Data awal: 16 | unik: 14 | duplikat dibuang: 2
+  - duplikat kode KMP-001 (Komputer Desktop i5)
+  - duplikat kode MSE-001 (Mouse Optik)
+Disimpan ke: data/output/inventaris_bersih.csv
+[exit code: 0]
+
+$ python main.py -i data/input/inventaris.json rekap
+[INFO] 16 baris valid dimuat dari data/input/inventaris.json
+[INFO] 2 baris duplikat diabaikan agar rekap tidak terhitung ganda
+KATEGORI       JENIS   UNIT          NILAI ASET
+-----------------------------------------------
+IoT                2     18        Rp 1.935.000
+Jaringan           3      7       Rp 13.800.000
+Kelistrikan        1      6        Rp 8.700.000
+Komputer           2     28      Rp 223.600.000
+Multimedia         2      6       Rp 19.500.000
+Periferal          4     59       Rp 49.020.000
+-----------------------------------------------
+TOTAL             14    124      Rp 316.555.000
+
+Stok habis/menipis (jumlah <= 3):
+  - NET-003 Kabel UTP Cat6 (roll): 0 unit (HABIS)
+  - MSE-001 Mouse Optik: 2 unit (MENIPIS)
+  - NET-001 Switch 24 Port: 3 unit (MENIPIS)
+  - PRJ-001 Proyektor: 3 unit (MENIPIS)
+  - PRJ-002 Layar Proyektor: 3 unit (MENIPIS)
+  - SNS-001 Sensor DHT22: 3 unit (MENIPIS)
+Disimpan ke: data/output/rekap_kategori.json
+[exit code: 0]
+
+$ python main.py -i data/input/inventaris_rusak.csv tampil
+[PERINGATAN] Baris 3 dilewati: kolom 'jumlah' harus bilangan bulat, bukan 'abc'
+[PERINGATAN] Baris 4 dilewati: kolom 'harga' tidak boleh negatif (-150000)
+[PERINGATAN] Baris 5 dilewati: kondisi 'hilang' tidak dikenal (pilihan: baik, perbaikan, rusak)
+[PERINGATAN] Baris 6 dilewati: kolom kosong: kode
+[INFO] 2 baris valid dimuat dari data/input/inventaris_rusak.csv
+KODE     NAMA                     KATEGORI     JUMLAH HARGA          KONDISI    LOKASI       
+-------- ------------------------ ------------ ------ -------------- ---------- -------------
+KMP-001  Komputer Desktop i5      Komputer     20     Rp 7.500.000   baik       Lab 1        
+UPS-001  UPS 1200VA               Kelistrikan  6      Rp 1.450.000   baik       Ruang Server 
+Total: 2 baris
+[exit code: 0]
+
+$ python main.py -i data/input/tidak_ada.csv tampil
+[ERROR] file tidak ditemukan: data/input/tidak_ada.csv
+[exit code: 1]
+
+$ python main.py -i data/input/header_salah.csv tampil
+[ERROR] header CSV kekurangan kolom: kategori, kondisi, lokasi
+[exit code: 1]
+
+$ python main.py -i data/input/inventaris.xlsx tampil
+[ERROR] ekstensi '.xlsx' tidak didukung (gunakan .csv atau .json)
+[exit code: 1]
+
+$ python main.py filter --kondisi hilang
+usage: main.py filter [-h] [--kategori KATEGORI]
+                      [--kondisi {baik,perbaikan,rusak}]
+                      [--stok-maks STOK_MAKS]
+main.py filter: error: argument --kondisi: invalid choice: 'hilang' (choose from 'baik', 'perbaikan', 'rusak')
+[exit code: 2]
+
+$ printf "2
+laptop
+3
+IoT
+
+
+9
+0
+" | python main.py menu
+[INFO] 16 baris valid dimuat dari data/input/inventaris.csv
+
+=== MENU INVENTARIS LAB ===
+1. Tampilkan data
+2. Cari nama barang
+3. Filter data
+4. Rekap per kategori
+5. Hapus duplikat
+0. Keluar
+Pilih menu: Kata kunci nama: KODE     NAMA                     KATEGORI     JUMLAH HARGA          KONDISI    LOKASI       
+-------- ------------------------ ------------ ------ -------------- ---------- -------------
+KMP-002  Laptop Praktikum         Komputer     8      Rp 9.200.000   baik       Lab 2        
+Total: 1 baris
+Disimpan ke: data/output/hasil_cari.csv
+
+=== MENU INVENTARIS LAB ===
+1. Tampilkan data
+2. Cari nama barang
+3. Filter data
+4. Rekap per kategori
+5. Hapus duplikat
+0. Keluar
+Pilih menu: Kategori (kosong = semua): Kondisi baik/rusak/perbaikan (kosong = semua): Stok maksimal (kosong = bebas): KODE     NAMA                     KATEGORI     JUMLAH HARGA          KONDISI    LOKASI       
+-------- ------------------------ ------------ ------ -------------- ---------- -------------
+ARD-001  Arduino Uno              IoT          15     Rp 120.000     baik       Lab IoT      
+SNS-001  Sensor DHT22             IoT          3      Rp 45.000      baik       Lab IoT      
+Total: 2 baris
+Disimpan ke: data/output/hasil_filter.csv
+
+=== MENU INVENTARIS LAB ===
+1. Tampilkan data
+2. Cari nama barang
+3. Filter data
+4. Rekap per kategori
+5. Hapus duplikat
+0. Keluar
+Pilih menu: Menu tidak dikenal, coba lagi.
+
+=== MENU INVENTARIS LAB ===
+1. Tampilkan data
+2. Cari nama barang
+3. Filter data
+4. Rekap per kategori
+5. Hapus duplikat
+0. Keluar
+Pilih menu: Sampai jumpa.
+[exit code: 0]

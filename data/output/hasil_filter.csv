@@ -1,0 +1,3 @@
+kode,nama,kategori,jumlah,harga,kondisi,lokasi
+ARD-001,Arduino Uno,IoT,15,120000,baik,Lab IoT
+SNS-001,Sensor DHT22,IoT,3,45000,baik,Lab IoT

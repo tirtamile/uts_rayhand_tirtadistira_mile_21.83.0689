@@ -1,0 +1,32 @@
+{
+  "IoT": {
+    "jenis": 2,
+    "unit": 18,
+    "nilai": 1935000
+  },
+  "Jaringan": {
+    "jenis": 3,
+    "unit": 7,
+    "nilai": 13800000
+  },
+  "Kelistrikan": {
+    "jenis": 1,
+    "unit": 6,
+    "nilai": 8700000
+  },
+  "Komputer": {
+    "jenis": 2,
+    "unit": 28,
+    "nilai": 223600000
+  },
+  "Multimedia": {
+    "jenis": 2,
+    "unit": 6,
+    "nilai": 19500000
+  },
+  "Periferal": {
+    "jenis": 4,
+    "unit": 59,
+    "nilai": 49020000
+  }
+}
