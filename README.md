@@ -95,7 +95,5 @@ Setelah perbaikan: Komputer = 28 unit, total aset = Rp 316.555.000.
 
 ## Sumber referensi dan bantuan AI
 - Dokumentasi Python 3: https://docs.python.org/3/ (modul csv, json, argparse, unittest)
-- Bantuan AI: ISI SENDIRI, sebutkan alat AI yang kamu pakai dan bagian yang dibantu.
+- Bantuan AI: claude ai (membuat codingan)
 
-## Link repository
-ISI SENDIRI: URL repository GitHub/GitLab (publik atau dosen sudah diberi akses).
